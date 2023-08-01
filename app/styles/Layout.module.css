@@ -1,0 +1,13 @@
+.logRegButton:active,
+.logRegButton:hover,
+.logRegButton:focus {
+	text-decoration: underline;
+}
+
+.spaceseekers Button {
+	width: 190px;
+	height: 48px;
+	border-radius: 4px;
+	padding: 8px, 35px, 8px, 35px;
+
+}
