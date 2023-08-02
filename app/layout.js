@@ -3,9 +3,9 @@ import Header from "./components/Header";
 import style from "./styles/globals.css";
 import Button from "./components/Button";
 import styles from "./styles/Layout.module.css";
-import signIn from "./signin/page";
-
 import Link from "next/link";
+import { BsFillPersonFill } from "react-icons/bs";
+import { AiOutlineHome } from "react-icons/ai";
 
 const poppins = Poppins({
 	weight: ["400", "700"],
@@ -29,10 +29,26 @@ export default function RootLayout({ children }) {
 				</div>
 				<hr className="w-[400px] h-[2px] mb-3 bg-neutral-300 border-0 m-auto" />
 				<div className={`flex justify-center gap-2  ${styles.spaceseekers}`}>
-					<Button style={{ backgroundColor: "#e4e5e7", color: "#c2c2c2" }}>
+					<Button
+						style={{
+							backgroundColor: "#e4e5e7",
+							color: "#c2c2c2",
+							display: "flex",
+							alignItems: "center",
+							gap: "3px",
+						}}>
+						{<BsFillPersonFill style={{ width: "30px", height: "20px" }} />}
 						Space Seekers
 					</Button>
-					<Button>Space Owners</Button>
+					<Button
+						style={{
+							display: "flex",
+							alignItems: "center",
+							gap: "3px",
+						}}>
+						{<AiOutlineHome style={{ width: "30px", height: "20px" }} />}
+						Space Owner
+					</Button>
 				</div>
 
 				<main>{children}</main>

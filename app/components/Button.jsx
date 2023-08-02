@@ -1,6 +1,6 @@
 import React from "react";
 
-const Button = ({ children, className, style }) => {
+const Button = ({ children, icon, className, style }) => {
 
   const defaultStyles = {
     backgroundColor: "lime-800",
@@ -20,6 +20,7 @@ const Button = ({ children, className, style }) => {
   return (
     <div>
       <button className={`bg-${buttonStyles.backgroundColor} text-${buttonStyles.color} px-3 ${className}`} style={buttonStyles}>
+      {icon && <span className="mr-2">{icon}</span>}
         {children}
       </button>
     </div>

@@ -1,7 +1,7 @@
 .logRegButton:active,
 .logRegButton:hover,
 .logRegButton:focus {
-	text-decoration: underline;
+	/* text-decoration: underline; */
 }
 
 .spaceseekers Button {
