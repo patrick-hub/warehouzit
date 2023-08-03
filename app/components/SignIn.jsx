@@ -57,7 +57,7 @@ export default function SignIn() {
 					<Input
 						key={field.id}
 						handleChange={handleChange}
-						value={loginState[field.id]}
+						value={signinState[field.id]}
 						labelText={field.labelText}
 						labelFor={field.labelFor}
 						id={field.id}
