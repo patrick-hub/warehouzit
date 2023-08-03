@@ -18,8 +18,22 @@ export default function Signup() {
 	const [signupState, setSignupState] = useState(fieldsState);
 	const [isLoading, setIsLoading] = useState(false);
 
-	const handleChange = (e) =>
-		setSignupState({ ...signupState, [e.target.id]: e.target.value });
+	const handleChange = (e) => {
+        const { id, value } = e.target;
+        if (id === "email") {
+          const [username] = value.split("@");
+          const [firstName, lastName] = username.split(".");
+          const derivedUsername = `${firstName}.${lastName}`;
+          setSignupState({
+            ...signupState,
+            email: value,
+            username: derivedUsername,
+          });
+        }
+         else {
+          setSignupState({ ...signupState, [id]: value });
+        }
+    }
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -37,10 +51,10 @@ export default function Signup() {
 		try {
 			const { confirm_password, ...signupData } = signupState;
 
-			if (signupData.password !== confirm_password) {
-				toast.error("Password and Confirm Password do not match.");
-				return;
-			}
+      if (signupData.password !== confirm_password) {
+        toast.error("Password and Confirm Password do not match.");
+        return;
+      }
 
 			const response = await axios.post(regApi, signupData, {
 				headers: {
