@@ -5,6 +5,7 @@ import FormAction from "../forms/formAction";
 import FormExtra from "../forms/formExtra";
 import Input from "../components/Input";
 import axios from "../api/axios";
+import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
 const signinApi = "https://warehouzitserver.onrender.com/api/v1/auth/login";
