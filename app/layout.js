@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
 						{<BsFillPersonFill style={{ width: "30px", height: "20px" }} />}
 						Space Seekers
 					</Button>
-					<Button
+					<Button className={styles.owner}
 						style={{
 							display: "flex",
 							alignItems: "center",
