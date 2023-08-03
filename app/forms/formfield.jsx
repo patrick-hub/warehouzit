@@ -27,7 +27,7 @@ const signupFields=[
     {
         labelText:"First Name",
         labelFor:"firstName",
-        id:"firstName",
+        id:"firstname",
         name:"firstName",
         type:"text",
         autoComplete:"firstName",
@@ -38,7 +38,7 @@ const signupFields=[
         labelText:"Last Name",
         labelFor:"lastName",
         id:"lastName",
-        name:"lastName",
+        name:"lastname",
         type:"text",
         autoComplete:"lastName",
         isRequired:true,
@@ -47,7 +47,7 @@ const signupFields=[
     {
         labelText:"Email address",
         labelFor:"email-address",
-        id:"emailAddress",
+        id:"email",
         name:"email",
         type:"email",
         autoComplete:"email",
@@ -57,7 +57,7 @@ const signupFields=[
     {
         labelText:"Phone Number",
         labelFor:"phoneNumber",
-        id:"phoneNumber",
+        id:"phonenumber",
         name:"phone",
         type:"phone",
         autoComplete:"phone number",
@@ -77,7 +77,7 @@ const signupFields=[
     {
         labelText:"Confirm Password",
         labelFor:"confirm-password",
-        id:"confirmPassword",
+        id:"confirm_password",
         name:"confirm-password",
         type:"password",
         autoComplete:"confirm-password",
